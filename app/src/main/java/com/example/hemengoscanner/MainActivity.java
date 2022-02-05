@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import com.google.zxing.integration.android.IntentResult;
 // Implements the interface onClickListener of the View class for the onclick behaviour of button
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button scanBtn;
+    Button manuBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Referencing and initializing layout elements
         scanBtn = findViewById(R.id.btnScan);
+        manuBtn = findViewById(R.id.btnManu);
 
-        // Adding listener to the button
+        // Adding listener to the buttons
         scanBtn.setOnClickListener(this);
+        manuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentScanManu=new Intent(MainActivity.this, ScanManuActivity.class);
+                startActivity(intentScanManu);
+            }
+        });
+
+        TextView helpTextMain = (TextView) this.findViewById(R.id.helpTextMain);
+        helpTextMain.setSelected(true);
+
     }
 
     @Override

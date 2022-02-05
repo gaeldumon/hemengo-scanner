@@ -19,18 +19,45 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgHemengoLogo"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.416" />
+
+    <Button
+        android:id="@+id/btnManu"
+        android:layout_width="220dp"
+        android:layout_height="64dp"
+        android:backgroundTint="@color/grass"
+        android:text="@string/cta_manu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScan"
+        app:layout_constraintVertical_bias="0.061" />
 
     <ImageView
         android:id="@+id/imgHemengoLogo"
         android:layout_width="220dp"
         android:layout_height="100dp"
-        android:layout_marginTop="268dp"
         android:contentDescription="@string/desc_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
         app:srcCompat="@drawable/hemengo_logo_full_cropped" />
+
+    <TextView
+        android:id="@+id/helpTextMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(S'il est impossible de scanner le QR Code, vous pouvez entrer directement le n° de série en cliquant sur le bouton manuel)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="15sp"
+        android:textColor="#95dc9e"
+        android:textStyle="bold|italic"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
