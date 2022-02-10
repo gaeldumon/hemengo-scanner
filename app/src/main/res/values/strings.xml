@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Hemengo Scanner</string>
     <string name="cta_scan">Scanner le distributeur</string>
+    <string name="cta_manu">Mode manuel</string>
     <string name="desc_logo">Hemengo Scanner Logo</string>
     <string name="desc_icon_qrcode">QR Code Icon</string>
 </resources>
